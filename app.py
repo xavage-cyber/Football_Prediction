@@ -16,7 +16,7 @@ away = st.sidebar.selectbox('Select away team', ['Aston Villa', 'Arsenal', 'Bour
 button = st.sidebar.button('Predict')
 
 
-data = pd.read_csv('E0.csv')
+data = pd.read_csv('https://www.football-data.co.uk/mmz4281/2223/E0.csv')
 # selecting only 4 columns
 epl = data[['HomeTeam', 'AwayTeam','FTHG', 'FTAG']]
 # rename the columns
