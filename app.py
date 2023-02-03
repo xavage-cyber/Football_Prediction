@@ -14,11 +14,9 @@ away = st.sidebar.selectbox('Select away team', ['Aston Villa', 'Arsenal', 'Bour
                                           'Leeds', 'Leicester', 'Liverpool', 'Man United', 'Man City', 'Newcastle', 'Nott\'m Forest', 'Southampton',
                                            'Tottenham', 'West Ham', 'Wolves'])
 button = st.sidebar.button('Predict')
-if home == away:
-    st.error('You can\'t predict the same team!')
 
 
-data = pd.read_csv('https://www.football-data.co.uk/mmz4281/2223/E0.csv')
+data = pd.read_csv('E0.csv')
 # selecting only 4 columns
 epl = data[['HomeTeam', 'AwayTeam','FTHG', 'FTAG']]
 # rename the columns
@@ -62,6 +60,7 @@ def get_scores():
     ''' Display results'''
     # select only one team
     if home == away:
+        st.error('You can\'t predict the same team')
         return None
     st.write(f'Score Prediction betweeen {home} and {away}')
     st.write(f'{home} ------   {home_goals}:{away_goals} ------  {away}')
