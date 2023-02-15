@@ -6,6 +6,7 @@ import numpy as np
 from scipy.stats import poisson
 
 st.header('English Premier League Prediction App')
+st.sidebar.info('Created and designed by  [Jonaben](https://www.linkedin.com/in/jonathan-ben-okah-7b507725b)')
 home = st.sidebar.selectbox('Select home team', ['Arsenal', 'Aston Villa', 'Bournemouth', 'Brentford', 'Brighton', 'Chelsea', 'Crystal Palace', 'Everton', 'Fulham',
                                           'Leeds', 'Leicester', 'Liverpool', 'Man United', 'Man City', 'Newcastle', 'Nott\'m Forest', 'Southampton',
                                            'Tottenham', 'West Ham', 'Wolves'])
