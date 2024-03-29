@@ -5,7 +5,7 @@ import statsmodels.formula.api as smf
 import numpy as np
 from scipy.stats import poisson
 
-st.header('English Premier League Prediction App')
+st.header('English Premier League 2023/2024 Prediction App')
 st.sidebar.info('Created and designed by  [Jonaben](https://www.linkedin.com/in/jonathan-ben-okah-7b507725b)')
 home = st.sidebar.selectbox('Select home team', ['Arsenal', 'Aston Villa', 'Bournemouth','Burnley', 'Brentford', 'Brighton', 'Chelsea', 'Crystal Palace', 'Everton', 'Fulham',
                                           'Luton', 'Liverpool', 'Man United', 'Man City', 'Newcastle', 'Nott\'m Forest', 'Sheffield United',
@@ -33,8 +33,8 @@ model = smf.glm(formula=formula, data=df, family=sm.families.Poisson()).fit()
 
 
 # predicting the scores
-home_goals = int(model.predict(pd.DataFrame(data={'team': home, 'opponent': away, 'home':1}, index=[1])))
-away_goals = int(model.predict(pd.DataFrame(data={'team': away, 'opponent': home, 'home':0}, index=[1])))
+home_goals = int(model.predict(pd.DataFrame(data={'team': home, 'opponent': away, 'home':1}, index=[1])).iloc[0])
+away_goals = int(model.predict(pd.DataFrame(data={'team': away, 'opponent': home, 'home':0}, index=[1])).iloc[0])
 total_goals = home_goals + away_goals
 
 def predict_match(model, homeTeam, awayTeam, max_goals=10):
