@@ -7,17 +7,17 @@ from scipy.stats import poisson
 
 st.header('English Premier League 2023/2024 Prediction App')
 st.sidebar.info('Created and designed by  [Jonaben](https://www.linkedin.com/in/jonathan-ben-okah-7b507725b)')
-home = st.sidebar.selectbox('Select home team', ['Arsenal', 'Aston Villa', 'Bournemouth','Burnley', 'Brentford', 'Brighton', 'Chelsea', 'Crystal Palace', 'Everton', 'Fulham',
-                                          'Luton', 'Liverpool', 'Man United', 'Man City', 'Newcastle', 'Nott\'m Forest', 'Sheffield United',
+home = st.sidebar.selectbox('Select home team', ['Arsenal', 'Aston Villa', 'Bournemouth','Ipswich', 'Brentford', 'Brighton', 'Chelsea', 'Crystal Palace', 'Everton', 'Fulham',
+                                          'Leicester', 'Liverpool', 'Man United', 'Man City', 'Newcastle', 'Nott\'m Forest', 'Southampton',
                                            'Tottenham', 'West Ham', 'Wolves'])
 
-away = st.sidebar.selectbox('Select away team', ['Aston Villa', 'Arsenal', 'Bournemouth', 'Burnley', 'Brentford', 'Brighton', 'Chelsea', 'Crystal Palace', 'Everton', 'Fulham',
-                                          'Luton', 'Liverpool', 'Man United', 'Man City', 'Newcastle', 'Nott\'m Forest', 'Sheffield United',
+away = st.sidebar.selectbox('Select away team', ['Aston Villa', 'Arsenal', 'Bournemouth', 'Ipswich', 'Brentford', 'Brighton', 'Chelsea', 'Crystal Palace', 'Everton', 'Fulham',
+                                          'Leicester', 'Liverpool', 'Man United', 'Man City', 'Newcastle', 'Nott\'m Forest', 'Southampton',
                                            'Tottenham', 'West Ham', 'Wolves'])
 button = st.sidebar.button('Predict')
 
 
-data = pd.read_csv('https://www.football-data.co.uk/mmz4281/2324/E0.csv')
+data = pd.read_csv('https://www.football-data.co.uk/mmz4281/2425/E0.csv')
 # selecting only 4 columns
 epl = data[['HomeTeam', 'AwayTeam','FTHG', 'FTAG']]
 # rename the columns
