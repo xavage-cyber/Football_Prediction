@@ -5,7 +5,7 @@ import statsmodels.formula.api as smf
 import numpy as np
 from scipy.stats import poisson
 
-st.header('English Premier League 2023/2024 Prediction App')
+st.header('English Premier League 2024/2025 Prediction App')
 st.sidebar.info('Created and designed by  [Jonaben](https://www.linkedin.com/in/jonathan-ben-okah-7b507725b)')
 home = st.sidebar.selectbox('Select home team', ['Arsenal', 'Aston Villa', 'Bournemouth','Ipswich', 'Brentford', 'Brighton', 'Chelsea', 'Crystal Palace', 'Everton', 'Fulham',
                                           'Leicester', 'Liverpool', 'Man United', 'Man City', 'Newcastle', 'Nott\'m Forest', 'Southampton',
