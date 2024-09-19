@@ -8,7 +8,7 @@ from scipy.stats import poisson
 st.title('English Premier League 2024/2025 Prediction App')
 st.write('Predict the outcome of English Premier League matches using statistical models.')
 
-st.sidebar.info('Catch up with the latest Chelsea FC news at [Football Catchup]("https://www.football.com")')
+st.sidebar.markdown('Catch up with the latest Chelsea FC news at [Football Catchup]("https://www.footballcatchup.com")')
 
 home = st.sidebar.selectbox('Select home team', ['Arsenal', 'Aston Villa', 'Bournemouth', 'Ipswich', 'Brentford', 'Brighton', 'Chelsea', 'Crystal Palace', 'Everton', 'Fulham',
                                                  'Leicester', 'Liverpool', 'Man United', 'Man City', 'Newcastle', 'Nott\'m Forest', 'Southampton',
